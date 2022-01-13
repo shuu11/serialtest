@@ -185,10 +185,10 @@
       <TreeImageGuid>03cad1e8-2eb3-4cde-a8a3-982423631122</TreeImageGuid>
       <ParentItem>5908c817-02fd-4cc0-bc4b-9c2f84d8ee6d</ParentItem>
     </Instance>
-    <Instance Guid="09626ab7-23f3-4cdb-812a-fd197678d7d8">
+    <Instance Guid="4d31f28a-078e-479c-88e9-5bb7db8fb004">
       <Name>iodefine.h</Name>
       <Type>File</Type>
-      <RelativePath>src\project\iodefine.h</RelativePath>
+      <RelativePath>src\r_cg\iodefine.h</RelativePath>
       <TreeImageGuid>03cad1e8-2eb3-4cde-a8a3-982423631122</TreeImageGuid>
       <ParentItem>5908c817-02fd-4cc0-bc4b-9c2f84d8ee6d</ParentItem>
     </Instance>
@@ -954,9 +954,9 @@ src\project
     <Instance Guid="6732e340-8178-4a87-9c6d-1fc6e5ecd687">
       <LinkOrder-0>3</LinkOrder-0>
     </Instance>
-    <Instance Guid="09626ab7-23f3-4cdb-812a-fd197678d7d8">
-      <ItemAddTime>637776975895686835</ItemAddTime>
-      <ItemAddTimeCount>3</ItemAddTimeCount>
+    <Instance Guid="4d31f28a-078e-479c-88e9-5bb7db8fb004">
+      <ItemAddTime>637776989862929545</ItemAddTime>
+      <ItemAddTimeCount>0</ItemAddTimeCount>
     </Instance>
     <Instance Guid="de0cdb35-2c6d-4e14-9cb5-6d13e1c7f8e4">
       <ItemAddTime>637776134425771995</ItemAddTime>
@@ -1632,7 +1632,7 @@ src\project
       <DebuggerProperty-EssentialProperty-Flash-IdCode-Code8>0</DebuggerProperty-EssentialProperty-Flash-IdCode-Code8>
       <DebuggerProperty-EssentialProperty-Flash-IdCode-Code9>0</DebuggerProperty-EssentialProperty-Flash-IdCode-Code9>
       <DebuggerProperty-EssentialProperty-Flash-PermitFlashProgramming>Yes</DebuggerProperty-EssentialProperty-Flash-PermitFlashProgramming>
-      <DebuggerProperty-EssentialProperty-Flash-ForceEraseChip>No</DebuggerProperty-EssentialProperty-Flash-ForceEraseChip>
+      <DebuggerProperty-EssentialProperty-Flash-ForceEraseChip>Yes</DebuggerProperty-EssentialProperty-Flash-ForceEraseChip>
       <DebuggerProperty-EssentialProperty-Flash-UseLowVoltageFlashMode>Yes</DebuggerProperty-EssentialProperty-Flash-UseLowVoltageFlashMode>
       <DebuggerProperty-EssentialProperty-Clock-MainClockForOCD>0</DebuggerProperty-EssentialProperty-Clock-MainClockForOCD>
       <DebuggerProperty-EssentialProperty-Clock-SubClockForOCD>0</DebuggerProperty-EssentialProperty-Clock-SubClockForOCD>
@@ -1693,6 +1693,7 @@ src\project
       <DebuggerProperty-HookProperty-HookTransaction-Broke-Length>0</DebuggerProperty-HookProperty-HookTransaction-Broke-Length>
       <DebuggerProperty-HookProperty-HookTransaction-Connected-Length>0</DebuggerProperty-HookProperty-HookTransaction-Connected-Length>
       <DebuggerProperty-HookProperty-HookTransaction-Disconnecting-Length>0</DebuggerProperty-HookProperty-HookTransaction-Disconnecting-Length>
+      <DebuggerProperty-EssentialProperty-EmulatorConnect-SerialNumber />
     </Instance>
   </Class>
   <Class Guid="9f7af90c-526c-4f28-af29-524df208b9e0">
@@ -4903,7 +4904,7 @@ src\project
         &lt;cg_security7 Name="cg_security7" Value="00" /&gt;
         &lt;cg_security5 Name="cg_security5" Value="00" /&gt;
         &lt;cg_crc_area Name="cg_crc_area" Value="00" /&gt;
-        &lt;rrm Name="rrm" Value="0FF00" /&gt;
+        &lt;ocdstart Name="ocdstart" Value="0FF00" /&gt;
         &lt;cg_security3 Name="cg_security3" Value="00" /&gt;
         &lt;cg_security0 Name="cg_security0" Value="00" /&gt;
         &lt;cg_security1 Name="cg_security1" Value="00" /&gt;
@@ -4913,13 +4914,13 @@ src\project
         &lt;cg_option Name="cg_option" Value="85" /&gt;
         &lt;cg_security8 Name="cg_security8" Value="00" /&gt;
         &lt;cg_security6 Name="cg_security6" Value="00" /&gt;
-        &lt;ocdstart Name="ocdstart" Value="0FF00" /&gt;
+        &lt;cg_security4 Name="cg_security4" Value="00" /&gt;
         &lt;cg_onchip Name="cg_onchip" Value="" /&gt;
         &lt;cg_security2 Name="cg_security2" Value="00" /&gt;
         &lt;cg_iawctl_value Name="cg_iawctl_value" Value="00" /&gt;
         &lt;cg_ocd_ram_size Name="cg_ocd_ram_size" Value="256" /&gt;
         &lt;wdt_option Name="wdt_option" Value="FE" /&gt;
-        &lt;cg_security4 Name="cg_security4" Value="00" /&gt;
+        &lt;rrm Name="rrm" Value="0FF00" /&gt;
       &lt;/GlobleUserTag&gt;
     &lt;/TAG&gt;
   &lt;/DIR&gt;
@@ -5570,7 +5571,7 @@ src\project
           &lt;setting name="OperationMode" value="16bits" /&gt;
           &lt;setting name="Count_clock" value="MCK clock" /&gt;
           &lt;setting name="Sub_clock_mode" value="-1" /&gt;
-          &lt;setting name="Interval_value" value="100" /&gt;
+          &lt;setting name="Interval_value" value="500" /&gt;
           &lt;setting name="Value_scale" value="0" /&gt;
           &lt;setting name="Intervalvalue_High8bits" value="100" /&gt;
           &lt;setting name="Intervalvalue_High8bits_scale" value="-1" /&gt;
@@ -5616,7 +5617,6 @@ src\project
 &lt;/RL78G13&gt;</CodeGenerator>
       <FormatVersion>1.0</FormatVersion>
       <ToolGUID>92529507-65ac-496c-9f9f-1ca3830687d8</ToolGUID>
-      <CodeGeneratorItem>6af8347f-2d5a-4be5-bd36-7e94ed2c8de1</CodeGeneratorItem>
     </Instance>
   </Class>
   <Class Guid="2a2c2a43-ecdb-4e88-80bd-e75f3e33db90">

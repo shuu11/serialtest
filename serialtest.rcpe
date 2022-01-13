@@ -32,7 +32,7 @@
         <Path>src\r_cg\r_cg_timer.c</Path>
         <Path>src\r_cg\r_cg_timer_user.c</Path>
         <Path>src\r_cg\r_cg_timer.h</Path>
-        <Path>src\project\iodefine.h</Path>
+        <Path>src\r_cg\iodefine.h</Path>
       </Category>
       <Category Name="project">
         <Path>src\project\define.h</Path>
@@ -1392,7 +1392,7 @@
         &lt;cg_security7 Name="cg_security7" Value="00" /&gt;
         &lt;cg_security5 Name="cg_security5" Value="00" /&gt;
         &lt;cg_crc_area Name="cg_crc_area" Value="00" /&gt;
-        &lt;rrm Name="rrm" Value="0FF00" /&gt;
+        &lt;ocdstart Name="ocdstart" Value="0FF00" /&gt;
         &lt;cg_security3 Name="cg_security3" Value="00" /&gt;
         &lt;cg_security0 Name="cg_security0" Value="00" /&gt;
         &lt;cg_security1 Name="cg_security1" Value="00" /&gt;
@@ -1402,13 +1402,13 @@
         &lt;cg_option Name="cg_option" Value="85" /&gt;
         &lt;cg_security8 Name="cg_security8" Value="00" /&gt;
         &lt;cg_security6 Name="cg_security6" Value="00" /&gt;
-        &lt;ocdstart Name="ocdstart" Value="0FF00" /&gt;
+        &lt;cg_security4 Name="cg_security4" Value="00" /&gt;
         &lt;cg_onchip Name="cg_onchip" Value="" /&gt;
         &lt;cg_security2 Name="cg_security2" Value="00" /&gt;
         &lt;cg_iawctl_value Name="cg_iawctl_value" Value="00" /&gt;
         &lt;cg_ocd_ram_size Name="cg_ocd_ram_size" Value="256" /&gt;
         &lt;wdt_option Name="wdt_option" Value="FE" /&gt;
-        &lt;cg_security4 Name="cg_security4" Value="00" /&gt;
+        &lt;rrm Name="rrm" Value="0FF00" /&gt;
       &lt;/GlobleUserTag&gt;
     &lt;/TAG&gt;
   &lt;/DIR&gt;
@@ -2059,7 +2059,7 @@
           &lt;setting name="OperationMode" value="16bits" /&gt;
           &lt;setting name="Count_clock" value="MCK clock" /&gt;
           &lt;setting name="Sub_clock_mode" value="-1" /&gt;
-          &lt;setting name="Interval_value" value="100" /&gt;
+          &lt;setting name="Interval_value" value="500" /&gt;
           &lt;setting name="Value_scale" value="0" /&gt;
           &lt;setting name="Intervalvalue_High8bits" value="100" /&gt;
           &lt;setting name="Intervalvalue_High8bits_scale" value="-1" /&gt;

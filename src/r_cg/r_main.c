@@ -36,6 +36,7 @@ Includes
 #include "r_cg_timer.h"
 #include "r_cg_wdt.h"
 /* Start user code for include. Do not edit comment generated here */
+#include <string.h>
 #include "myproj.h"
 #include "global.h"
 /* End user code. Do not edit comment generated here */
@@ -67,8 +68,8 @@ void main(void)
     /* Start user code. Do not edit comment generated here */
     while (1U)
     {
-        if(g_b100ms){
-            g_b100ms = mCLR;
+        if(g_b500ms){
+            g_b500ms = mCLR;
             R_WDT_Restart();
 
             R_UART0_Send((uint8_t *)&cStr[0], sizeof(cStr));

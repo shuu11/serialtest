@@ -394,9 +394,9 @@ Macro definitions (Register bit)
 Macro definitions
 ***********************************************************************************************************************/
 /* 16-bit timer data register 00 (TDR00) */
-#define _C34F_TAU_TDR00_VALUE                   (0xC34FU)
+#define _F423_TAU_TDR00_VALUE                   (0xF423U)
 /* Clock divisor for TAU0 channel 0 */
-#define _0040_TAU0_CHANNEL0_DIVISOR             (0x0040U)
+#define _0100_TAU0_CHANNEL0_DIVISOR             (0x0100U)
 
 /***********************************************************************************************************************
 Typedef definitions
