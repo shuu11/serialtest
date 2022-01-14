@@ -32,6 +32,8 @@ Includes
 #include "r_cg_macrodriver.h"
 #include "r_cg_serial.h"
 /* Start user code for include. Do not edit comment generated here */
+#include "myproj.h"
+#include "extern.h"
 /* End user code. Do not edit comment generated here */
 #include "r_cg_userdefine.h"
 
@@ -121,6 +123,7 @@ static void __near r_uart0_interrupt_send(void)
 static void r_uart0_callback_receiveend(void)
 {
     /* Start user code. Do not edit comment generated here */
+    g_bRx0_fin = mSET;
     /* End user code. Do not edit comment generated here */
 }
 

@@ -52,7 +52,8 @@ Pragma directive
 Global variables and functions
 ***********************************************************************************************************************/
 /* Start user code for global. Do not edit comment generated here */
-static CHAR cStr[]="Start UART";
+static CHAR cTxStr[]="Start UART";
+static CHAR cRxStr[6];
 /* End user code. Do not edit comment generated here */
 void R_MAIN_UserInit(void);
 
@@ -72,7 +73,13 @@ void main(void)
             g_b500ms = mCLR;
             R_WDT_Restart();
 
-            R_UART0_Send((uint8_t *)&cStr[0], sizeof(cStr));
+            R_UART0_Send((uint8_t *)&cTxStr[0], sizeof(cTxStr));
+
+            if(g_bRx0_fin){
+                g_bRx0_fin = mCLR;
+
+                R_UART0_Receive((uint8_t *)&cRxStr[0],sizeof(cRxStr));
+            }
         }
     }
     /* End user code. Do not edit comment generated here */
@@ -91,6 +98,8 @@ void R_MAIN_UserInit(void)
 
     R_UART0_Start();
     R_TAU0_Channel0_Start();
+
+    R_UART0_Receive((uint8_t *)&cRxStr[0],sizeof(cRxStr));
 
     mPO_LED1 = mLED_ON;
     mPO_LED2 = mLED_ON;
