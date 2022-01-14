@@ -192,33 +192,66 @@
       <TreeImageGuid>03cad1e8-2eb3-4cde-a8a3-982423631122</TreeImageGuid>
       <ParentItem>5908c817-02fd-4cc0-bc4b-9c2f84d8ee6d</ParentItem>
     </Instance>
-    <Instance Guid="1d88b634-0f0f-4581-870e-76a0cf3f5271">
+    <Instance Guid="0966ada2-20c8-4f91-a644-d4f2f3d7f4e1">
+      <Name>c</Name>
+      <Type>Category</Type>
+      <ParentItem>d20f5a61-b207-4e0a-83ca-c2d3fb0de667</ParentItem>
+      <Property>0ef54067-0426-4b67-82fc-d202b52e5d59</Property>
+    </Instance>
+    <Instance Guid="1932c237-57b1-4586-bcc1-d80ef4b63233">
+      <Name>h</Name>
+      <Type>Category</Type>
+      <ParentItem>d20f5a61-b207-4e0a-83ca-c2d3fb0de667</ParentItem>
+      <Property>8af33e92-8260-4771-9076-43fe139280f9</Property>
+    </Instance>
+    <Instance Guid="bde564f0-d71f-4699-89ce-a523b573b88d">
+      <Name>MainCtrl.c</Name>
+      <Type>File</Type>
+      <RelativePath>src\project\c\MainCtrl.c</RelativePath>
+      <TreeImageGuid>941832c1-fc3b-4e1b-94e8-01ea17128b42</TreeImageGuid>
+      <ParentItem>0966ada2-20c8-4f91-a644-d4f2f3d7f4e1</ParentItem>
+    </Instance>
+    <Instance Guid="5a92e913-5bf1-4d96-a49c-f7046da86bd8">
+      <Name>SerialCtrl.c</Name>
+      <Type>File</Type>
+      <RelativePath>src\project\c\SerialCtrl.c</RelativePath>
+      <TreeImageGuid>941832c1-fc3b-4e1b-94e8-01ea17128b42</TreeImageGuid>
+      <ParentItem>0966ada2-20c8-4f91-a644-d4f2f3d7f4e1</ParentItem>
+    </Instance>
+    <Instance Guid="fa37f0c2-cdfb-433b-88cd-e5536fd46a97">
       <Name>define.h</Name>
       <Type>File</Type>
-      <RelativePath>src\project\define.h</RelativePath>
+      <RelativePath>src\project\h\define.h</RelativePath>
       <TreeImageGuid>03cad1e8-2eb3-4cde-a8a3-982423631122</TreeImageGuid>
-      <ParentItem>d20f5a61-b207-4e0a-83ca-c2d3fb0de667</ParentItem>
+      <ParentItem>1932c237-57b1-4586-bcc1-d80ef4b63233</ParentItem>
     </Instance>
-    <Instance Guid="a8820215-518d-49aa-b242-788d49c7d938">
+    <Instance Guid="5423a815-7222-4893-84be-27d0d0bd7cb0">
       <Name>extern.h</Name>
       <Type>File</Type>
-      <RelativePath>src\project\extern.h</RelativePath>
+      <RelativePath>src\project\h\extern.h</RelativePath>
       <TreeImageGuid>03cad1e8-2eb3-4cde-a8a3-982423631122</TreeImageGuid>
-      <ParentItem>d20f5a61-b207-4e0a-83ca-c2d3fb0de667</ParentItem>
+      <ParentItem>1932c237-57b1-4586-bcc1-d80ef4b63233</ParentItem>
     </Instance>
-    <Instance Guid="18367ae8-45c1-4007-9399-ac06c16647a4">
+    <Instance Guid="66526815-cfc1-4237-8bc3-b54df88a33c7">
+      <Name>func.h</Name>
+      <Type>File</Type>
+      <RelativePath>src\project\h\func.h</RelativePath>
+      <TreeImageGuid>03cad1e8-2eb3-4cde-a8a3-982423631122</TreeImageGuid>
+      <ParentItem>1932c237-57b1-4586-bcc1-d80ef4b63233</ParentItem>
+    </Instance>
+    <Instance Guid="55ec26d9-9df0-4d09-a6cd-5a6b397b6297">
       <Name>global.h</Name>
       <Type>File</Type>
-      <RelativePath>src\project\global.h</RelativePath>
+      <RelativePath>src\project\h\global.h</RelativePath>
       <TreeImageGuid>03cad1e8-2eb3-4cde-a8a3-982423631122</TreeImageGuid>
-      <ParentItem>d20f5a61-b207-4e0a-83ca-c2d3fb0de667</ParentItem>
+      <ParentItem>1932c237-57b1-4586-bcc1-d80ef4b63233</ParentItem>
     </Instance>
-    <Instance Guid="fa4d1831-07bb-45c1-89c6-de130f3ade65">
+    <Instance Guid="583c373b-a86e-48c5-bae8-91a61fab6002">
       <Name>myproj.h</Name>
       <Type>File</Type>
-      <RelativePath>src\project\myproj.h</RelativePath>
+      <RelativePath>src\project\h\myproj.h</RelativePath>
       <TreeImageGuid>03cad1e8-2eb3-4cde-a8a3-982423631122</TreeImageGuid>
-      <ParentItem>d20f5a61-b207-4e0a-83ca-c2d3fb0de667</ParentItem>
+      <ParentItem>1932c237-57b1-4586-bcc1-d80ef4b63233</ParentItem>
     </Instance>
   </Class>
   <Class Guid="fb98844b-2c27-4275-9804-f6e63e204da0">
@@ -235,6 +268,12 @@
       <MemoCount>0</MemoCount>
     </Instance>
     <Instance Guid="df6b46e1-43c7-47d8-9fd3-c65946544a2a">
+      <MemoCount>0</MemoCount>
+    </Instance>
+    <Instance Guid="0ef54067-0426-4b67-82fc-d202b52e5d59">
+      <MemoCount>0</MemoCount>
+    </Instance>
+    <Instance Guid="8af33e92-8260-4771-9076-43fe139280f9">
       <MemoCount>0</MemoCount>
     </Instance>
   </Class>
@@ -304,7 +343,11 @@
       <SourceItemType12>CSource</SourceItemType12>
       <SourceItemGuid13>a3280bf6-91a1-4f70-ad60-f3667bf5790b</SourceItemGuid13>
       <SourceItemType13>CSource</SourceItemType13>
-      <SourceItemCount>14</SourceItemCount>
+      <SourceItemGuid14>bde564f0-d71f-4699-89ce-a523b573b88d</SourceItemGuid14>
+      <SourceItemType14>CSource</SourceItemType14>
+      <SourceItemGuid15>5a92e913-5bf1-4d96-a49c-f7046da86bd8</SourceItemGuid15>
+      <SourceItemType15>CSource</SourceItemType15>
+      <SourceItemCount>16</SourceItemCount>
       <LastDeviceChangedCounter>0</LastDeviceChangedCounter>
     </Instance>
     <Instance Guid="6bb7060d-7e24-4135-bd9b-7db166417523">
@@ -470,14 +513,15 @@
       <COptionCheckLanguageExtension-DefaultValue>False</COptionCheckLanguageExtension-DefaultValue>
       <COptionMisraIntermodule-DefaultValue>False</COptionMisraIntermodule-DefaultValue>
       <IsLockedByUser>False</IsLockedByUser>
-      <TimeTagModified--0>-8585596150139191728</TimeTagModified--0>
+      <TimeTagModified--0>-8585594332586212057</TimeTagModified--0>
       <COptionAsmPath-0>False</COptionAsmPath-0>
       <COptionChangeMessageError-0>No</COptionChangeMessageError-0>
       <COptionCharacterSet-0>Auto</COptionCharacterSet-0>
       <COptionConvertCc-0>None</COptionConvertCc-0>
       <COptionDblSize-0>True</COptionDblSize-0>
       <COptionG-0>True</COptionG-0>
-      <COptionI-0>src\r_cg
+      <COptionI-0>src\project\h
+src\r_cg
 src\project
 .
 </COptionI-0>
@@ -692,7 +736,7 @@ src\project
       <LinkOptionShowCFI-DefaultValue>False</LinkOptionShowCFI-DefaultValue>
       <LinkOptionRrmValue-DefaultValue />
       <IsLockedByUser>False</IsLockedByUser>
-      <TimeTagModified--0>-8585595433461063888</TimeTagModified--0>
+      <TimeTagModified--0>-8585594328932912965</TimeTagModified--0>
       <LinkOptionAutoSectionLayout-0>True</LinkOptionAutoSectionLayout-0>
       <LinkOptionCpu-0>False</LinkOptionCpu-0>
       <LinkOptionDebug-0>Debug</LinkOptionDebug-0>
@@ -886,7 +930,7 @@ src\project
       <LibOptionChangeMessageError-DefaultValue>None</LibOptionChangeMessageError-DefaultValue>
       <LibOptionChangeMessageErrorNumber-DefaultValue />
       <IsLockedByUser>False</IsLockedByUser>
-      <TimeTagModified--0>-8585596149974197941</TimeTagModified--0>
+      <TimeTagModified--0>-8585594328932912965</TimeTagModified--0>
       <LibOptionDebug-0>Debug</LibOptionDebug-0>
       <LibOptionForm-0>LibraryU</LibOptionForm-0>
       <LibOptionInput-0 />
@@ -1042,20 +1086,32 @@ src\project
       <ItemAddTime>637776927393571427</ItemAddTime>
       <ItemAddTimeCount>2</ItemAddTimeCount>
     </Instance>
-    <Instance Guid="18367ae8-45c1-4007-9399-ac06c16647a4">
-      <ItemAddTime>637776975895686835</ItemAddTime>
-      <ItemAddTimeCount>2</ItemAddTimeCount>
-    </Instance>
-    <Instance Guid="a8820215-518d-49aa-b242-788d49c7d938">
-      <ItemAddTime>637776975895686835</ItemAddTime>
+    <Instance Guid="5423a815-7222-4893-84be-27d0d0bd7cb0">
+      <ItemAddTime>637778028268699624</ItemAddTime>
       <ItemAddTimeCount>1</ItemAddTimeCount>
     </Instance>
-    <Instance Guid="1d88b634-0f0f-4581-870e-76a0cf3f5271">
-      <ItemAddTime>637776975895686835</ItemAddTime>
+    <Instance Guid="66526815-cfc1-4237-8bc3-b54df88a33c7">
+      <ItemAddTime>637778028268699624</ItemAddTime>
+      <ItemAddTimeCount>2</ItemAddTimeCount>
+    </Instance>
+    <Instance Guid="fa37f0c2-cdfb-433b-88cd-e5536fd46a97">
+      <ItemAddTime>637778028268699624</ItemAddTime>
       <ItemAddTimeCount>0</ItemAddTimeCount>
     </Instance>
-    <Instance Guid="fa4d1831-07bb-45c1-89c6-de130f3ade65">
-      <ItemAddTime>637776975895686835</ItemAddTime>
+    <Instance Guid="5a92e913-5bf1-4d96-a49c-f7046da86bd8">
+      <ItemAddTime>637778032057009441</ItemAddTime>
+      <ItemAddTimeCount>1</ItemAddTimeCount>
+    </Instance>
+    <Instance Guid="bde564f0-d71f-4699-89ce-a523b573b88d">
+      <ItemAddTime>637778032057009441</ItemAddTime>
+      <ItemAddTimeCount>0</ItemAddTimeCount>
+    </Instance>
+    <Instance Guid="55ec26d9-9df0-4d09-a6cd-5a6b397b6297">
+      <ItemAddTime>637778028268699624</ItemAddTime>
+      <ItemAddTimeCount>3</ItemAddTimeCount>
+    </Instance>
+    <Instance Guid="583c373b-a86e-48c5-bae8-91a61fab6002">
+      <ItemAddTime>637778028268699624</ItemAddTime>
       <ItemAddTimeCount>4</ItemAddTimeCount>
     </Instance>
     <Instance Guid="0b7e78c3-aadd-45ee-9f9d-ffac6141eeb2">
@@ -1117,6 +1173,14 @@ src\project
       <SourceItem13-IsLockedByUser>False</SourceItem13-IsLockedByUser>
       <SourceItem13-BuildingTarget-0>True</SourceItem13-BuildingTarget-0>
       <SourceItem13-IndividualCompileOption-0>False</SourceItem13-IndividualCompileOption-0>
+      <TimeTagModified-SourceItem14--0>-8585594328797766367</TimeTagModified-SourceItem14--0>
+      <SourceItem14-IsLockedByUser>False</SourceItem14-IsLockedByUser>
+      <SourceItem14-BuildingTarget-0>True</SourceItem14-BuildingTarget-0>
+      <SourceItem14-IndividualCompileOption-0>False</SourceItem14-IndividualCompileOption-0>
+      <TimeTagModified-SourceItem15--0>-8585594328797766367</TimeTagModified-SourceItem15--0>
+      <SourceItem15-IsLockedByUser>False</SourceItem15-IsLockedByUser>
+      <SourceItem15-BuildingTarget-0>True</SourceItem15-BuildingTarget-0>
+      <SourceItem15-IndividualCompileOption-0>False</SourceItem15-IndividualCompileOption-0>
     </Instance>
   </Class>
   <Class Guid="44fa27c9-0aa0-4297-bd3b-2c5c5bdb8881">
@@ -3767,7 +3831,7 @@ src\project
     &lt;PIOR4Value Name="PIOR4Value" Text="0" /&gt;
     &lt;PIOR5Value Name="PIOR5Value" Text="0" /&gt;
     &lt;ProjectName Name="PrjName" Text="serialtest" /&gt;
-    &lt;ProjectPath Name="PrjPath" Text="C:\Users\shuuk\OneDrive\デスクトップ\serialtest" /&gt;
+    &lt;ProjectPath Name="PrjPath" Text="C:\Users\shuuk\OneDrive\デスクトップ\shuu11\develop\serialtest" /&gt;
     &lt;ProjectKind Name="PrjKind" Text="Project78K0R" /&gt;
     &lt;DeviceName Name="DeviceName" Fixed="" Text="RL78G13" /&gt;
     &lt;MCUName Name="MCUName" Text="RL78G13_64pin" /&gt;
@@ -4904,7 +4968,7 @@ src\project
         &lt;cg_security7 Name="cg_security7" Value="00" /&gt;
         &lt;cg_security5 Name="cg_security5" Value="00" /&gt;
         &lt;cg_crc_area Name="cg_crc_area" Value="00" /&gt;
-        &lt;ocdstart Name="ocdstart" Value="0FF00" /&gt;
+        &lt;rrm Name="rrm" Value="0FF00" /&gt;
         &lt;cg_security3 Name="cg_security3" Value="00" /&gt;
         &lt;cg_security0 Name="cg_security0" Value="00" /&gt;
         &lt;cg_security1 Name="cg_security1" Value="00" /&gt;
@@ -4914,13 +4978,13 @@ src\project
         &lt;cg_option Name="cg_option" Value="85" /&gt;
         &lt;cg_security8 Name="cg_security8" Value="00" /&gt;
         &lt;cg_security6 Name="cg_security6" Value="00" /&gt;
-        &lt;cg_security4 Name="cg_security4" Value="00" /&gt;
+        &lt;ocdstart Name="ocdstart" Value="0FF00" /&gt;
         &lt;cg_onchip Name="cg_onchip" Value="" /&gt;
         &lt;cg_security2 Name="cg_security2" Value="00" /&gt;
         &lt;cg_iawctl_value Name="cg_iawctl_value" Value="00" /&gt;
         &lt;cg_ocd_ram_size Name="cg_ocd_ram_size" Value="256" /&gt;
         &lt;wdt_option Name="wdt_option" Value="FE" /&gt;
-        &lt;rrm Name="rrm" Value="0FF00" /&gt;
+        &lt;cg_security4 Name="cg_security4" Value="00" /&gt;
       &lt;/GlobleUserTag&gt;
     &lt;/TAG&gt;
   &lt;/DIR&gt;

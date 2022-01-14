@@ -35,10 +35,17 @@
         <Path>src\r_cg\iodefine.h</Path>
       </Category>
       <Category Name="project">
-        <Path>src\project\define.h</Path>
-        <Path>src\project\extern.h</Path>
-        <Path>src\project\global.h</Path>
-        <Path>src\project\myproj.h</Path>
+        <Category Name="c">
+          <Path>src\project\c\MainCtrl.c</Path>
+          <Path>src\project\c\SerialCtrl.c</Path>
+        </Category>
+        <Category Name="h">
+          <Path>src\project\h\define.h</Path>
+          <Path>src\project\h\extern.h</Path>
+          <Path>src\project\h\func.h</Path>
+          <Path>src\project\h\global.h</Path>
+          <Path>src\project\h\myproj.h</Path>
+        </Category>
       </Category>
       <Category Name="コード生成" />
     </Files>
@@ -66,8 +73,11 @@
           <Path>DefaultBuild\r_cg_wdt_user.obj</Path>
           <Path>DefaultBuild\r_cg_timer.obj</Path>
           <Path>DefaultBuild\r_cg_timer_user.obj</Path>
+          <Path>DefaultBuild\MainCtrl.obj</Path>
+          <Path>DefaultBuild\SerialCtrl.obj</Path>
         </LinkOrder>
         <CommonOptions>
+          <IncludePathForC>src\project\h</IncludePathForC>
           <IncludePathForC>src\r_cg</IncludePathForC>
           <IncludePathForC>src\project</IncludePathForC>
           <IncludePathForC>.</IncludePathForC>
@@ -82,6 +92,7 @@
           <Option>-g</Option>
           <Option>-g_line</Option>
           <Option>-Onothing</Option>
+          <Option>-I src\project\h</Option>
           <Option>-I src\r_cg</Option>
           <Option>-I src\project</Option>
           <Option>-I .</Option>
@@ -255,7 +266,7 @@
     &lt;PIOR4Value Name="PIOR4Value" Text="0" /&gt;
     &lt;PIOR5Value Name="PIOR5Value" Text="0" /&gt;
     &lt;ProjectName Name="PrjName" Text="serialtest" /&gt;
-    &lt;ProjectPath Name="PrjPath" Text="C:\Users\shuuk\OneDrive\デスクトップ\serialtest" /&gt;
+    &lt;ProjectPath Name="PrjPath" Text="C:\Users\shuuk\OneDrive\デスクトップ\shuu11\develop\serialtest" /&gt;
     &lt;ProjectKind Name="PrjKind" Text="Project78K0R" /&gt;
     &lt;DeviceName Name="DeviceName" Fixed="" Text="RL78G13" /&gt;
     &lt;MCUName Name="MCUName" Text="RL78G13_64pin" /&gt;
@@ -1392,7 +1403,7 @@
         &lt;cg_security7 Name="cg_security7" Value="00" /&gt;
         &lt;cg_security5 Name="cg_security5" Value="00" /&gt;
         &lt;cg_crc_area Name="cg_crc_area" Value="00" /&gt;
-        &lt;ocdstart Name="ocdstart" Value="0FF00" /&gt;
+        &lt;rrm Name="rrm" Value="0FF00" /&gt;
         &lt;cg_security3 Name="cg_security3" Value="00" /&gt;
         &lt;cg_security0 Name="cg_security0" Value="00" /&gt;
         &lt;cg_security1 Name="cg_security1" Value="00" /&gt;
@@ -1402,13 +1413,13 @@
         &lt;cg_option Name="cg_option" Value="85" /&gt;
         &lt;cg_security8 Name="cg_security8" Value="00" /&gt;
         &lt;cg_security6 Name="cg_security6" Value="00" /&gt;
-        &lt;cg_security4 Name="cg_security4" Value="00" /&gt;
+        &lt;ocdstart Name="ocdstart" Value="0FF00" /&gt;
         &lt;cg_onchip Name="cg_onchip" Value="" /&gt;
         &lt;cg_security2 Name="cg_security2" Value="00" /&gt;
         &lt;cg_iawctl_value Name="cg_iawctl_value" Value="00" /&gt;
         &lt;cg_ocd_ram_size Name="cg_ocd_ram_size" Value="256" /&gt;
         &lt;wdt_option Name="wdt_option" Value="FE" /&gt;
-        &lt;rrm Name="rrm" Value="0FF00" /&gt;
+        &lt;cg_security4 Name="cg_security4" Value="00" /&gt;
       &lt;/GlobleUserTag&gt;
     &lt;/TAG&gt;
   &lt;/DIR&gt;

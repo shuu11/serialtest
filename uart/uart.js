@@ -1,5 +1,4 @@
 const SerialPort = require('serialport');
-const Delimiter = require('@serialport/parser-delimiter');
 const { Readline } = SerialPort.parsers;
 
 const port = new SerialPort('COM3', {
@@ -7,8 +6,9 @@ const port = new SerialPort('COM3', {
 	dataBits: 8,
 	parity: 'none',
 	stopBits: 1,
-	flowControl: false,
 });
+
+
 const parser = port.pipe(new Readline({ delimiter: '\0' }));
 
 // port open
@@ -18,12 +18,14 @@ parser.on('open', () => {
 
 // 受信割り込み処理
 parser.on('data', (data) => {
-	console.log(data);
+	console.log('Receive data:', data);
 
-	// 送信割り込み処理
+	// 送信処理
 	setTimeout(() => {
-		port.write('Hi Tom', () => {
-			console.log('message written');
+		const data = 'Hi Tom';
+
+		port.write(data, () => {
+			console.log('Send data:', data);
 		});
 	}, 100);
 });
