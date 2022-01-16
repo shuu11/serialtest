@@ -6,11 +6,12 @@
 
 void mainCtrl(void)
 {
-	if (g_b500ms)
+	if (g_500ms)
 	{
-		g_b500ms = CLR;
+		g_500ms = CLR;
 		R_WDT_Restart();
 
 		serialCtrl();
+		ledCtrl();
 	}
 }

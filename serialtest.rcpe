@@ -36,8 +36,9 @@
       </Category>
       <Category Name="project">
         <Category Name="c">
-          <Path>src\project\c\MainCtrl.c</Path>
-          <Path>src\project\c\SerialCtrl.c</Path>
+          <Path>src\project\c\mainCtrl.c</Path>
+          <Path>src\project\c\serialCtrl.c</Path>
+          <Path>src\project\c\setupCtrl.c</Path>
         </Category>
         <Category Name="h">
           <Path>src\project\h\define.h</Path>
@@ -47,6 +48,7 @@
           <Path>src\project\h\myproj.h</Path>
         </Category>
       </Category>
+      <Category Name="コード生成" />
       <Category Name="コード生成" />
     </Files>
     <DebugOptions>
@@ -73,8 +75,9 @@
           <Path>DefaultBuild\r_cg_wdt_user.obj</Path>
           <Path>DefaultBuild\r_cg_timer.obj</Path>
           <Path>DefaultBuild\r_cg_timer_user.obj</Path>
-          <Path>DefaultBuild\MainCtrl.obj</Path>
-          <Path>DefaultBuild\SerialCtrl.obj</Path>
+          <Path>DefaultBuild\mainCtrl.obj</Path>
+          <Path>DefaultBuild\serialCtrl.obj</Path>
+          <Path>DefaultBuild\setupCtrl.obj</Path>
         </LinkOrder>
         <CommonOptions>
           <IncludePathForC>src\project\h</IncludePathForC>
@@ -1399,16 +1402,16 @@
     &lt;/FUNC&gt;
     &lt;TAG&gt;
       &lt;GlobleUserTag&gt;
+        &lt;cg_security4 Name="cg_security4" Value="00" /&gt;
         &lt;cg_security9 Name="cg_security9" Value="00" /&gt;
         &lt;cg_security7 Name="cg_security7" Value="00" /&gt;
         &lt;cg_security5 Name="cg_security5" Value="00" /&gt;
         &lt;cg_crc_area Name="cg_crc_area" Value="00" /&gt;
-        &lt;rrm Name="rrm" Value="0FF00" /&gt;
         &lt;cg_security3 Name="cg_security3" Value="00" /&gt;
         &lt;cg_security0 Name="cg_security0" Value="00" /&gt;
         &lt;cg_security1 Name="cg_security1" Value="00" /&gt;
+        &lt;cg_ocd_ram_size Name="cg_ocd_ram_size" Value="256" /&gt;
         &lt;clock_option Name="clock_option" Value="E8" /&gt;
-        &lt;lvi_option Name="lvi_option" Value="73" /&gt;
         &lt;pior_value Name="pior_value" Value="00" /&gt;
         &lt;cg_option Name="cg_option" Value="85" /&gt;
         &lt;cg_security8 Name="cg_security8" Value="00" /&gt;
@@ -1417,9 +1420,9 @@
         &lt;cg_onchip Name="cg_onchip" Value="" /&gt;
         &lt;cg_security2 Name="cg_security2" Value="00" /&gt;
         &lt;cg_iawctl_value Name="cg_iawctl_value" Value="00" /&gt;
-        &lt;cg_ocd_ram_size Name="cg_ocd_ram_size" Value="256" /&gt;
+        &lt;lvi_option Name="lvi_option" Value="73" /&gt;
         &lt;wdt_option Name="wdt_option" Value="FE" /&gt;
-        &lt;cg_security4 Name="cg_security4" Value="00" /&gt;
+        &lt;rrm Name="rrm" Value="0FF00" /&gt;
       &lt;/GlobleUserTag&gt;
     &lt;/TAG&gt;
   &lt;/DIR&gt;
@@ -1985,7 +1988,7 @@
           &lt;setting name="Receive_data_direction" value="LSB" /&gt;
           &lt;setting name="Receive_data_length" value="8 bits" /&gt;
           &lt;setting name="Receive_parity" value="none" /&gt;
-          &lt;setting name="RecBaudrate" value="9600" /&gt;
+          &lt;setting name="RecBaudrate" value="19200" /&gt;
           &lt;setting name="Receive_end_callback_function" value="generated" /&gt;
           &lt;setting name="Receive_error_callback_function" value="generated" /&gt;
           &lt;setting name="Transfer_mode" value="single" /&gt;
@@ -1994,7 +1997,7 @@
           &lt;setting name="Transmit_data_length" value="8 bits" /&gt;
           &lt;setting name="Transmit_parity" value="none" /&gt;
           &lt;setting name="Transmit_stop_length" value="1 bit" /&gt;
-          &lt;setting name="TranBaudrate" value="9600" /&gt;
+          &lt;setting name="TranBaudrate" value="19200" /&gt;
           &lt;setting name="Transmit_end_callback_function" value="generated" /&gt;
           &lt;setting name="Transmit_end_interrupt_priority" value="3" /&gt;
           &lt;setting name="Receive_error_interrupt_priority" value="3" /&gt;

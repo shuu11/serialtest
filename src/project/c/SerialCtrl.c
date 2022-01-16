@@ -18,17 +18,16 @@ static void serialCtrl_main(void)
 {
 	R_UART0_Send((uint8_t *)&txStr[0], (uint16_t)ARRAY_LENGTH(txStr));
 
-	if (g_bRx0_fin)
+	if (g_rx0_fin)
 	{
-		g_bRx0_fin = CLR;
+		g_rx0_fin = CLR;
 
-		memset(rxStr, 0, ARRAY_LENGTH(rxStr));
 		R_UART0_Receive((uint8_t *)&rxStr[0], (uint16_t)ARRAY_LENGTH(rxStr));
 	}
 }
 
 void serialCtrl_init(void)
 {
-	memset(rxStr, 1, ARRAY_LENGTH(rxStr));
+	memset(rxStr, 0, ARRAY_LENGTH(rxStr));
 	R_UART0_Receive((uint8_t *)&rxStr[0], (uint16_t)ARRAY_LENGTH(rxStr));
 }

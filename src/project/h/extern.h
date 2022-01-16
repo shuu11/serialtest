@@ -1,7 +1,7 @@
 #ifndef _EXTERN_H
 #define _EXTERN_H
 
-extern BYTE g_b500ms;
-extern BYTE g_bRx0_fin;
+extern BYTE g_500ms;
+extern BYTE g_rx0_fin;
 
 #endif
