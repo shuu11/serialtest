@@ -23,7 +23,7 @@
 * Device(s)    : R5F100LE
 * Tool-Chain   : CCRL
 * Description  : This file implements device driver for Serial module.
-* Creation Date: 2022/01/13
+* Creation Date: 2022/01/16
 ***********************************************************************************************************************/
 
 /***********************************************************************************************************************
@@ -123,7 +123,7 @@ static void __near r_uart0_interrupt_send(void)
 static void r_uart0_callback_receiveend(void)
 {
     /* Start user code. Do not edit comment generated here */
-    g_bRx0_fin = mSET;
+    g_bRx0_fin = SET;
     /* End user code. Do not edit comment generated here */
 }
 

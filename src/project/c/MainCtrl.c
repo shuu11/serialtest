@@ -4,13 +4,13 @@
 #include "myproj.h"
 #include "extern.h"
 
-void vMainCtrl(void)
+void mainCtrl(void)
 {
 	if (g_b500ms)
 	{
-		g_b500ms = mCLR;
+		g_b500ms = CLR;
 		R_WDT_Restart();
 
-		vSerialCtrl();
+		serialCtrl();
 	}
 }

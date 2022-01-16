@@ -1,25 +1,34 @@
+#include <string.h>
+
 #include "r_cg_macrodriver.h"
 #include "r_cg_serial.h"
 
 #include "myproj.h"
 #include "extern.h"
 
-static CHAR cTxStr[] = "Start UART";
-static CHAR cRxStr[6];
+static CHAR txStr[] = "Start UART";
+static CHAR rxStr[6];
 
-void vSerialCtrl(void)
+void serialCtrl(void)
 {
-	R_UART0_Send((uint8_t *)&cTxStr[0], sizeof(cTxStr));
+	serialCtrl_main();
+}
+
+static void serialCtrl_main(void)
+{
+	R_UART0_Send((uint8_t *)&txStr[0], (uint16_t)ARRAY_LENGTH(txStr));
 
 	if (g_bRx0_fin)
 	{
-		g_bRx0_fin = mCLR;
+		g_bRx0_fin = CLR;
 
-		R_UART0_Receive((uint8_t *)&cRxStr[0], sizeof(cRxStr));
+		memset(rxStr, 0, ARRAY_LENGTH(rxStr));
+		R_UART0_Receive((uint8_t *)&rxStr[0], (uint16_t)ARRAY_LENGTH(rxStr));
 	}
 }
 
-void vSerialCtrl_Init(void)
+void serialCtrl_init(void)
 {
-	R_UART0_Receive((uint8_t *)&cRxStr[0],sizeof(cRxStr));
+	memset(rxStr, 1, ARRAY_LENGTH(rxStr));
+	R_UART0_Receive((uint8_t *)&rxStr[0], (uint16_t)ARRAY_LENGTH(rxStr));
 }

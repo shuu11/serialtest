@@ -2,7 +2,7 @@ const SerialPort = require('serialport');
 const { Readline } = SerialPort.parsers;
 
 const port = new SerialPort('COM3', {
-	baudRate: 9600,
+	baudRate: 19200,
 	dataBits: 8,
 	parity: 'none',
 	stopBits: 1,

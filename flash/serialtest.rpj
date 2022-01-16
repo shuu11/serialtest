@@ -6,7 +6,7 @@
   <Device>RL78</Device>
   <OperationTab>
     <Endian>RFLG_ENDIAN_LITTLE</Endian>
-    <ProgramFile>C:\Users\shuuk\OneDrive\デスクトップ\serialtest\DefaultBuild\serialtest.hex</ProgramFile>
+    <ProgramFile>..\DefaultBuild\serialtest.hex</ProgramFile>
   </OperationTab>
   <OperationSettingTab>
     <FillCode>False</FillCode>

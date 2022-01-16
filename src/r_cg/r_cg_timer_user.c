@@ -23,7 +23,7 @@
 * Device(s)    : R5F100LE
 * Tool-Chain   : CCRL
 * Description  : This file implements device driver for TAU module.
-* Creation Date: 2022/01/13
+* Creation Date: 2022/01/16
 ***********************************************************************************************************************/
 
 /***********************************************************************************************************************
@@ -59,7 +59,7 @@ Global variables and functions
 static void __near r_tau0_channel0_interrupt(void)
 {
     /* Start user code. Do not edit comment generated here */
-    g_b500ms = mSET;
+    g_b500ms = SET;
     /* End user code. Do not edit comment generated here */
 }
 
