@@ -123,7 +123,7 @@ static void __near r_uart0_interrupt_send(void)
 static void r_uart0_callback_receiveend(void)
 {
     /* Start user code. Do not edit comment generated here */
-    g_rx0_fin = SET;
+    g_rx0_fin = mSET;
     /* End user code. Do not edit comment generated here */
 }
 

@@ -3,19 +3,37 @@
 #include "myproj.h"
 #include "extern.h"
 
+static void ledfunc__(void);
+static void ledfunc01(void);
+
+static BYTE ledSts;
+
+FUNCPTR fpLED[eLED_STS_MAX] = {
+		// イベント
+		ledfunc01, //	0.デフォルト
+		ledfunc__, //	1.エラー
+};
+
 void ledCtrl(void)
 {
-	ledCtrl_main();
+	fpLED[ledSts]();
 }
 
-static void ledCtrl_main(void)
+static void ledfunc__(void)
 {
-	PO_LED1 = LED_ON;
-	PO_LED2 = LED_ON;
+	__nop();
+}
+
+static void ledfunc01(void)
+{
+	mPO_LED1 = mLED_ON;
+	mPO_LED2 = mLED_ON;
 }
 
 void ledCtrl_init(void)
 {
-	PO_LED1 = LED_ON;
-	PO_LED2 = LED_ON;
+	ledSts = eLED_STS_DEFAULT;
+
+	mPO_LED1 = mLED_ON;
+	mPO_LED2 = mLED_ON;
 }

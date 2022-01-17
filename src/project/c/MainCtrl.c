@@ -8,7 +8,7 @@ void mainCtrl(void)
 {
 	if (g_500ms)
 	{
-		g_500ms = CLR;
+		g_500ms = mCLR;
 		R_WDT_Restart();
 
 		serialCtrl();
