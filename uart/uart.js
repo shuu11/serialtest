@@ -11,9 +11,18 @@ const port = new SerialPort('COM3', {
 
 const parser = port.pipe(new Readline({ delimiter: '\0' }));
 
+const srcPath = {
+	fs: './uart/log.txt',
+};
+
+
 // port open
 port.on('open', () => {
-	fs.writeFile('./uart/log.txt', 'port open completed!!\n', (err) => {
+	const text = 'port open completed!!';
+
+	console.log(text);
+
+	fs.writeFile(srcPath.fs, `${text}\n`, (err) => {
 		if (err) {
 			console.log(err);
 		}
@@ -22,7 +31,11 @@ port.on('open', () => {
 
 // 受信割り込み処理
 parser.on('data', (data) => {
-	fs.appendFile('./uart/log.txt', `Receive data:${data}\n`, (err) => {
+	const text = `Receive data:`;
+
+	console.log(`${text}${data}`);
+
+	fs.appendFile(srcPath.fs, `${text}${data}\n`, (err) => {
 		if (err) {
 			console.log(err);
 		}
@@ -30,10 +43,13 @@ parser.on('data', (data) => {
 
 	// 送信処理
 	setTimeout(() => {
+		const text = 'Send data:'
 		const data = 'Hi Tom';
 
+		console.log(`${text}${data}`);
+
 		port.write(data, () => {
-			fs.appendFile('./uart/log.txt', `Send data:${data}\n`, (err) => {
+			fs.appendFile(srcPath.fs, `${text}${data}\n`, (err) => {
 				if (err) {
 					console.log(err);
 				}

@@ -23,7 +23,7 @@
 * Device(s)    : R5F100LE
 * Tool-Chain   : CCRL
 * Description  : This file implements device driver for CGC module.
-* Creation Date: 2022/01/16
+* Creation Date: 2022/01/19
 ***********************************************************************************************************************/
 
 #ifndef CGC_H
