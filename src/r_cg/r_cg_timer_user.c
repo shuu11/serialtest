@@ -59,7 +59,7 @@ Global variables and functions
 static void __near r_tau0_channel0_interrupt(void)
 {
     /* Start user code. Do not edit comment generated here */
-    g_1ms = mSET;
+		interrupt_timer();
     /* End user code. Do not edit comment generated here */
 }
 

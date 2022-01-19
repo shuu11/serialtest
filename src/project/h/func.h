@@ -1,6 +1,8 @@
 #ifndef _FUNC_H
 #define _FUNC_H
 
+void interrupt_timer(void);
+
 void setupCtrl(void);
 
 void mainCtrl(void);

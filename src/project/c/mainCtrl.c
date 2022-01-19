@@ -16,18 +16,49 @@
 //----------------------------------------------------------------------
 
 //----------------------------------------------------------------------
+//  function table
+//----------------------------------------------------------------------
+static void fpFunc__(void);
+static void fpFunc01(void);
+
+static FUNCPTR fpTable[4][4] = {
+		fpFunc__,		fpFunc__,		fpFunc01,		fpFunc__,
+		fpFunc__,		fpFunc__,		fpFunc__,		fpFunc__,
+		fpFunc__,		fpFunc__,		fpFunc__,		fpFunc__,
+		fpFunc__,		fpFunc__,		fpFunc__,		fpFunc__,
+};
+
+//----------------------------------------------------------------------
 //  function
 //----------------------------------------------------------------------
 void mainCtrl(void)
 {
-	if (g_1ms)
-	{
-		g_1ms = mCLR;
-		R_WDT_Restart();
+	BYTE i;
+	BYTE eve;
 
-		serialCtrl();
-		ledCtrl();
+	for (i = 0; i < 4; i++)
+	{
+		eve = (BYTE)(g_timer >> i) & 0x01;
+
+		if(eve){
+			fpTable[g_mode][i]();
+
+			g_timer &= ~(0x0001 << i);
+		}
 	}
+}
+
+static void fpFunc__(void)
+{
+	__nop();
+}
+
+static void fpFunc01(void)
+{
+	R_WDT_Restart();
+
+	serialCtrl();
+	ledCtrl();
 }
 
 /************************************************************************/
