@@ -1,5 +1,5 @@
-#ifndef _MYPROJ_H
-#define _MYPROJ_H
+#ifndef MYPROJ_H
+#define MYPROJ_H
 
 #include "define.h"
 #include "func.h"

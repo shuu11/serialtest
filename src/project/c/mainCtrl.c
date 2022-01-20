@@ -21,11 +21,12 @@
 static void fpFunc__(void);
 static void fpFunc01(void);
 
-static FUNCPTR fpTable[4][4] = {
-		fpFunc__,		fpFunc__,		fpFunc01,		fpFunc__,
-		fpFunc__,		fpFunc__,		fpFunc__,		fpFunc__,
-		fpFunc__,		fpFunc__,		fpFunc__,		fpFunc__,
-		fpFunc__,		fpFunc__,		fpFunc__,		fpFunc__,
+static FUNCPTR fpTable[4][mTIMER_EVE_MAX] = {
+		// 1ms		10ms			100ms			500ms
+		fpFunc01, fpFunc__, fpFunc__, fpFunc__, //	デフォルトモード
+		fpFunc01, fpFunc__, fpFunc__, fpFunc__, //	通常モード
+		fpFunc01, fpFunc__, fpFunc__, fpFunc__, //	エラーモード
+		fpFunc01, fpFunc__, fpFunc__, fpFunc__, //	検査モード
 };
 
 //----------------------------------------------------------------------
@@ -36,11 +37,12 @@ void mainCtrl(void)
 	BYTE i;
 	BYTE eve;
 
-	for (i = 0; i < 4; i++)
+	for (i = 0; i < mTIMER_EVE_MAX; i++)
 	{
 		eve = (BYTE)(g_timer >> i) & 0x01;
 
-		if(eve){
+		if (eve)
+		{
 			fpTable[g_mode][i]();
 
 			g_timer &= ~(0x0001 << i);

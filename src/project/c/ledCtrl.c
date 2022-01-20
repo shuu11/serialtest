@@ -23,8 +23,8 @@ static void fpFunc01(void);
 
 static FUNCPTR fpTable[eLED_STS_MAX] = {
 		// イベント
-		fpFunc01, //	0.デフォルト
-		fpFunc__, //	1.エラー
+		fpFunc01, //	デフォルト
+		fpFunc__, //	エラー
 };
 
 
@@ -49,8 +49,6 @@ static void fpFunc01(void)
 
 void ledCtrl_init(void)
 {
-	ledSts = eLED_STS_DEFAULT;
-
 	mPO_LED1 = mLED_ON;
 	mPO_LED2 = mLED_ON;
 }

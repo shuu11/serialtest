@@ -12,31 +12,29 @@
 #include "myproj.h"
 #include "extern.h"
 
-#define mTIMER_MAX 4
-
 //----------------------------------------------------------------------
 //  static variable
 //----------------------------------------------------------------------
-static WORD timerCnt[mTIMER_MAX];
+static WORD timerCnt[mTIMER_EVE_MAX];
 
 //----------------------------------------------------------------------
 //  static const
 //----------------------------------------------------------------------
-static const WORD timerTable[mTIMER_MAX] = {
-		1,
-		10,
-		100,
-		500,
+static const WORD timerTable[mTIMER_EVE_MAX] = {
+		1,	 //	1ms
+		10,	 //	10ms
+		100, //	100ms
+		500, //	500ms
 };
 
 //----------------------------------------------------------------------
 //  function
 //----------------------------------------------------------------------
-void interrupt_timer(void)
+void interrupt_timer(void) //	タイマ割り込み
 {
 	BYTE i;
 
-	for (i = 0; i < mTIMER_MAX; i++)
+	for (i = 0; i < mTIMER_EVE_MAX; i++)
 	{
 		timerCnt[i]++;
 

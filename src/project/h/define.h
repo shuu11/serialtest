@@ -1,5 +1,5 @@
-#ifndef _DEFINE_H
-#define _DEFINE_H
+#ifndef DEFINE_H
+#define DEFINE_H
 
 typedef signed char CHAR;
 typedef unsigned char BYTE;
@@ -18,11 +18,21 @@ typedef void (*FUNCPTR)(void);
 
 #define mARRAY_LENGTH(array) (sizeof(array) / sizeof(array[0]))
 
+#define mTIMER_EVE_MAX 4
+
 enum
 {
 	eLED_STS_DEFAULT,
 	eLED_STS_ERR,
 	eLED_STS_MAX,
+};
+
+enum {
+	eMAIN_MODE_DEFAULT,
+	eMAIN_MODE_NORMAL,
+	eMAIN_MODE_ERR,
+	eMAIN_MODE_FUNCTION,
+	eMAIN_MODE_MAX,
 };
 
 enum
