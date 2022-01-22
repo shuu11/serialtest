@@ -21,7 +21,7 @@
 static void fpFunc__(void);
 static void fpFunc01(void);
 
-static FUNCPTR fpTable[4][mTIMER_EVE_MAX] = {
+static FUNCPTR fpTable[eMAIN_MODE_MAX][mTIMER_EVE_MAX] = {
 		// 1ms		10ms			100ms			500ms
 		fpFunc01, fpFunc__, fpFunc__, fpFunc__, //	デフォルトモード
 		fpFunc01, fpFunc__, fpFunc__, fpFunc__, //	通常モード

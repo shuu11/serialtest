@@ -1,19 +1,26 @@
 #ifndef FUNC_H
 #define FUNC_H
 
+// interrupt_timer
 void interrupt_timer(void);
 
-void setupCtrl(void);
+// ledCtrl
+void ledCtrl(void);
+void ledCtrl_init(void);
 
+// mainCtrl
 void mainCtrl(void);
 
+// serialCtrl
 void serialCtrl(void);
 void serialCtrl_init(void);
-
 static void serialCtrl_tx(void);
 static void serialCtrl_rx(void);
 
-void ledCtrl(void);
-void ledCtrl_init(void);
+// setupCtrl
+void setupCtrl(void);
+
+
+
 
 #endif
